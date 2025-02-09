@@ -2,6 +2,10 @@
   "name": "DeepCode",
   "displayName": "DeepCode: Be a sorcerer Supreme of AI,ML and DS coding",
   "description": "A snippet pack that would make you productive in ML and DS projects.",
+  "icon": "download.png","repository": {
+    "type": "git",
+    "url": "https://github.com/Dheenack/first_backend"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.97.0"
@@ -17,4 +21,5 @@
       }
     ]
   }
+
 }
