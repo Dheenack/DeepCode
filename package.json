@@ -1,0 +1,20 @@
+{
+  "name": "DeepCode",
+  "displayName": "DeepCode: Be a sorcerer Supreme of AI,ML and DS coding",
+  "description": "A snippet pack that would make you productive in ML and DS projects.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

@@ -1,0 +1,821 @@
+{
+    //pandas snippets for reading files
+ "read csv as df":{
+    "prefix": "read_csv",
+    "body": [
+        "import pandas as pd",
+        "",
+        "df = pd.read_csv('path_to_file.csv') # read csv file {replace path_to_file.csv with the relative path to the csv file}",
+        "df.head() # display first 5 rows of the dataframe"
+    ],
+    "description": "read csv file as dataframe"
+ },
+    "read excel as df":{
+        "prefix": "read_excel",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_excel('path_to_file.xlsx') # read excel file {replace path_to_file.xlsx with the relative path to the excel file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read excel files as dataframe"
+    },
+    "read json as df":{
+        "prefix": "read_json",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_json('path_to_file.json') # read json file {replace path_to_file.json with the relative path to the json file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read json files as dataframe"
+    },
+    "read sql as df":{
+        "prefix": "read_sql",
+        "body": [
+            "import pandas as pd",
+            "import sqlite3",
+            "",
+            "conn = sqlite3.connect('path_to_file.db') # connect to the database {replace path_to_file.db with the relative path to the database file}",
+            "query = 'SELECT * FROM table_name' # write the query to fetch the data from the table {replace table_name with the name of the table}",
+            "df = pd.read_sql(query, conn)",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read sql table as dataframe"
+    },
+    "read parquet as df":{
+        "prefix": "read_parquet",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_parquet('path_to_file.parquet') # read parquet file {replace path_to_file.parquet with the relative path to the parquet file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read parquet file as dataframe"
+    },
+    "read pickle as df":{
+        "prefix": "read_pickle",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_pickle('path_to_file.pkl') # read pickle file {replace path_to_file.pkl with the relative path to the pickle file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read pickle file as dataframe"
+    }, 
+    "read feather as df":{
+        "prefix": "read_feather",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_feather('path_to_file.feather') # read feather file {replace path_to_file.feather with the relative path to the feather file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read feather file as dataframe"
+    },
+    "read hdf as df":{
+        "prefix": "read_hdf",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_hdf('path_to_file.h5') # read hdf file {replace path_to_file.h5 with the relative path to the hdf file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read hdf file as dataframe"
+    }, 
+    "read sas as df":{
+        "prefix": "read_sas",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_sas('path_to_file.sas7bdat') # read sas file {replace path_to_file.sas7bdat with the relative path to the sas file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read sas file as dataframe"
+    },
+    "read stata as df":{
+        "prefix": "read_stata",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_stata('path_to_file.dta') # read stata file {replace path_to_file.dta with the relative path to the stata file}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read stata file as dataframe"
+    },
+    "read html as df":{
+        "prefix": "read_html",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_html('url') # read html table from a url {replace url with the url of the webpage}",
+            "df[0].head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read html table from a url as dataframe"
+    },
+    "read clipboard as df":{
+        "prefix": "read_clipboard",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_clipboard() # read data from clipboard",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read data from clipboard as dataframe"
+    },
+    "read sql query as df":{
+        "prefix": "read_sql_query",
+        "body": [
+            "import pandas as pd",
+            "import sqlite3",
+            "",
+            "conn = sqlite3.connect('path_to_file.db') # connect to the database {replace path_to_file.db with the relative path to the database file}",
+            "query = 'SELECT * FROM table_name' # write the query to fetch the data from the table {replace table_name with the name of the table}",
+            "df = pd.read_sql_query(query, conn)",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "read sql query result as dataframe"
+    },
+
+
+    //pandas snippets for data manipulation
+    
+    "dataframe creation":{
+        "prefix": "pd.dataframe",
+        "body": [
+            "df = pd.DataFrame(data=data,columms=data.keys(),index=[0]) # create a dataframe {replace data with the dictionary containing the data}",
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "create a dataframe from a dictionary"
+    },
+    "dataframe info":{
+        "prefix": "df.info",
+        "body": [
+            "df.info() # display information about the dataframe"
+        ],
+        "description": "display information about the dataframe"
+    },
+    "dataframe describe":{
+        "prefix": "df.describe",
+        "body": [
+            "df.describe() # display descriptive statistics of the dataframe"
+        ],
+        "description": "display descriptive statistics of the dataframe"
+    },
+    "dataframe shape":{
+        "prefix": "df.shape",
+        "body": [
+            "df.shape # display the shape of the dataframe"
+        ],
+        "description": "display the shape of the dataframe"
+    },
+    "dataframe columns":{
+        "prefix": "df.columns",
+        "body": [
+            "df.columns # display the columns of the dataframe"
+        ],
+        "description": "display the columns of the dataframe"
+    },
+    "dataframe head":{
+        "prefix": "df.head",
+        "body": [
+            "df.head() # display first 5 rows of the dataframe"
+        ],
+        "description": "display first 5 rows of the dataframe"
+    },
+    "dataframe tail":{
+        "prefix": "df.tail",
+        "body": [
+            "df.tail() # display last 5 rows of the dataframe"
+        ],
+        "description": "display last 5 rows of the dataframe"
+    },
+    "dataframe sample":{
+        "prefix": "df.sample",
+        "body": [
+            "df.sample(n=5) # display a random sample of 5 rows from the dataframe"
+        ],
+        "description": "display a random sample of rows from the dataframe"
+    },
+    "dataframe value counts":{
+        "prefix": "df.value_counts",
+        "body": [
+            "df['column_name'].value_counts() # display the frequency of each unique value in a column {replace column_name with the name of the column}"
+        ],
+        "description": "display the frequency of each unique value in a column"
+    },
+    "dataframe dropna":{
+        "prefix": "df.dropna",
+        "body": [
+            "df.dropna() # drop rows with missing values"
+        ],
+        "description": "drop rows with missing values"
+    },
+    "dataframe fillna":{
+        "prefix": "df.fillna",
+        "body": [
+            "df.fillna(value) # fill missing values with a specified value {replace value with the value to fill}"
+        ],
+        "description": "fill missing values with a specified value"
+    },
+    "dataframe drop duplicates":{
+        "prefix": "df.dd",
+        "body": [
+            "df.drop_duplicates() # drop duplicate rows"
+        ],
+        "description": "drop duplicate rows"
+    },
+    "dataframe drop columns":{
+        "prefix": "df.dc",
+        "body": [
+            "df.drop(columns=['column_name']) # drop columns from the dataframe {replace column_name with the name of the column}"
+        ],
+        "description": "drop columns from the dataframe"
+    },
+    "dataframe select columns":{
+        "prefix": "df[[",
+        "body": [
+            "df[['column1','column2']] # select specific columns from the dataframe {replace column1 and column2 with the names of the columns add if you want}"
+        ],
+        "description": "select specific columns from the dataframe"
+    },
+    "dataframe select rows":{
+        "prefix": "df.loc",
+        "body": [
+            "df.loc[condition] # select rows based on a condition {replace condition with the condition to filter the rows}"
+        ],
+        "description": "select rows based on a condition"
+    },
+    "dataframe groupby":{
+        "prefix": "df.groupby",
+        "body": [
+            "df.groupby('column_name').agg({'column_name':'function'}) # groupby a column and apply an aggregation function {replace column_name with the name of the column and function with the aggregation function}"
+        ],
+        "description": "groupby a column and apply an aggregation function"
+    },
+    "dataframe merge":{
+        "prefix": "df.merge",
+        "body": [
+            "df1.merge(df2,how='inner',on='column_name') # merge two dataframes on a common column {replace df1 and df2 with the dataframes to merge, column_name with the common column}"
+        ],
+        "description": "merge two dataframes on a common column"
+    },
+    "dataframe concat":{
+        "prefix": "pd.concat",
+        "body": [
+            "pd.concat([df1,df2],axis=0) # concatenate two dataframes along rows {replace df1 and df2 with the dataframes to concatenate}"
+        ],
+        "description": "concatenate two dataframes along rows"
+    },
+    "dataframe pivot table":{
+        "prefix": "pd.pivot_table",
+        "body": [
+            "pd.pivot_table(df,index='index_column',columns='column_name',values='value_column',aggfunc='function') # create a pivot table from a dataframe {replace index_column, column_name, value_column with the names of the columns and function with the aggregation function}"
+        ],
+        "description": "create a pivot table from a dataframe"
+    },
+    "dataframe melt":{
+        "prefix": "pd.melt",
+        "body": [
+            "pd.melt(df,id_vars=['id_column'],value_vars=['value_column1','value_column2'],var_name='variable_name',value_name='value_name') # melt a dataframe from wide to long format {replace id_column, value_column1, value_column2 with the names of the columns and variable_name, value_name with the names of the new columns}"
+        ],
+        "description": "melt a dataframe from wide to long format"
+    },
+
+
+    //pandas snippets for data conversion
+
+    "dataframe to csv":{
+        "prefix": "df.to_csv",
+        "body": [
+            "df.to_csv('path_to_file.csv',index=False) # write dataframe to a csv file {replace path_to_file.csv with the relative path to the csv file}"
+        ],
+        "description": "write dataframe to a csv file"
+    },
+    "dataframe to excel":{
+        "prefix": "df.to_excel",
+        "body": [
+            "df.to_excel('path_to_file.xlsx',index=False) # write dataframe to an excel file {replace path_to_file.xlsx with the relative path to the excel file}"
+        ],
+        "description": "write dataframe to an excel file"
+    },
+    "dataframe to json":{
+        "prefix": "df.to_json",
+        "body": [
+            "df.to_json('path_to_file.json',orient='records') # write dataframe to a json file {replace path_to_file.json with the relative path to the json file}"
+        ],
+        "description": "write dataframe to a json file"
+    },
+    "dataframe to sql":{
+        "prefix": "df.to_sql",
+        "body": [
+            "import sqlite3",
+            "",
+            "conn = sqlite3.connect('path_to_file.db') # connect to the database {replace path_to_file.db with the relative path to the database file}",
+            "df.to_sql('table_name',conn,if_exists='replace',index=False) # write dataframe to a sql table {replace table_name with the name of the table}"
+        ],
+        "description": "write dataframe to a sql table"
+    },
+    "dataframe to parquet":{
+        "prefix": "df.to_parquet",
+        "body": [
+            "df.to_parquet('path_to_file.parquet') # write dataframe to a parquet file {replace path_to_file.parquet with the relative path to the parquet file}"
+        ],
+        "description": "write dataframe to a parquet file"
+    },
+    "dataframe to pickle":{
+        "prefix": "df.to_pickle",
+        "body": [
+            "df.to_pickle('path_to_file.pkl') # write dataframe to a pickle file {replace path_to_file.pkl with the relative path to the pickle file}"
+        ],
+        "description": "write dataframe to a pickle file"
+    },
+    "dataframe to feather":{
+        "prefix": "df.to_feather",
+        "body": [
+            "df.to_feather('path_to_file.feather') # write dataframe to a feather file {replace path_to_file.feather with the relative path to the feather file}"
+        ],
+        "description": "write dataframe to a feather file"
+    },
+    "dataframe to hdf":{
+        "prefix": "df.to_hdf",
+        "body": [
+            "df.to_hdf('path_to_file.h5',key='df',mode='w') # write dataframe to a hdf file {replace path_to_file.h5 with the relative path to the hdf file}"
+        ],
+        "description": "write dataframe to a hdf file"
+    },
+    "dataframe to sas":{
+        "prefix": "df.to_sas",
+        "body": [
+            "df.to_sas('path_to_file.sas7bdat') # write dataframe to a sas file {replace path_to_file.sas7bdat with the relative path to the sas file}"
+        ],
+    },
+    "dataframe to stata":{
+        "prefix": "df.to_stata",
+        "body": [
+            "df.to_stata('path_to_file.dta') # write dataframe to a stata file {replace path_to_file.dta with the relative path to the stata file}"
+        ],
+    },
+    "dataframe to clipboard":{
+        "prefix": "df.to_clipboard",
+        "body": [
+            "df.to_clipboard() # copy dataframe to clipboard"
+        ],
+    },
+    "dataframe to html":{
+        "prefix": "df.to_html",
+        "body": [
+            "df.to_html('path_to_file.html') # write dataframe to an html file {replace path_to_file.html with the relative path to the html file}"
+        ],
+    },
+    "dataframe to latex":{
+        "prefix": "df.to_latex",
+        "body": [
+            "df.to_latex('path_to_file.tex') # write dataframe to a latex file {replace path_to_file.tex with the relative path to the tex file}"
+        ],
+    },
+    "dataframe to markdown":{
+        "prefix": "df.to_markdown",
+        "body": [
+            "df.to_markdown('path_to_file.md') # write dataframe to a markdown file {replace path_to_file.md with the relative path to the md file}"
+        ],
+    },
+    "dataframe to sql query":{
+        "prefix": "df.to_sql_query",
+        "body": [
+            "import sqlite3",
+            "",
+            "conn = sqlite3.connect('path_to_file.db') # connect to the database {replace path_to_file.db with the relative path to the database file}",
+            "df.to_sql('table_name',conn,if_exists='replace',index=False) # write dataframe to a sql table {replace table_name with the name of the table}"
+        ],
+    },
+    "dataframe to dictionary":{
+        "prefix": "df.to_dict",
+        "body": [
+            "df.to_dict() # convert dataframe to a dictionary"
+        ],
+    },
+    "dataframe to numpy array":{
+        "prefix": "df.to_numpy",
+        "body": [
+            "df.to_numpy() # convert dataframe to a numpy array"
+        ],
+    },
+    "dataframe to list":{
+        "prefix": "df.values",
+        "body": [
+            "df.values.tolist() # convert dataframe to a list"
+        ],
+    },
+    "dataframe to series":{
+        "prefix": "df.to_series",
+        "body": [
+            "df.to_series() # convert dataframe to a series"
+        ],
+    },
+    "dataframe to records":{
+        "prefix": "df.to_records",
+        "body": [
+            "df.to_records() # convert dataframe to records"
+        ],
+    },
+    "dataframe to json records":{
+        "prefix": "df.to_json_records",
+        "body": [
+            "df.to_json(orient='records') # convert dataframe to json records"
+        ],
+    },
+    "dataframe to json split":{
+        "prefix": "df.to_json_split",
+        "body": [
+            "df.to_json(orient='split') # convert dataframe to json split"
+        ],
+    },
+    "dataframe to json index":{
+        "prefix": "df.to_json_index",
+        "body": [
+            "df.to_json(orient='index') # convert dataframe to json index"
+        ],
+    },
+    "dataframe to json columns":{
+        "prefix": "df.to_json_columns",
+        "body": [
+            "df.to_json(orient='columns') # convert dataframe to json columns"
+        ],
+    },
+
+
+    //numpy snippets
+    "create numpy array":{
+        "prefix": "np.array",
+        "body": [
+            "np.array([1,2,3,4,5]) # create a numpy array {replce 1,2,3,4,5 with the elements of the array}"
+        ],
+    },
+    "create numpy zeros array":{
+        "prefix": "np.zeros",
+        "body": [
+            "np.zeros((3,3)) # create a numpy array of zeros {replace (3,3) with the shape of the array}"
+        ],
+    },
+    "create numpy ones array":{
+        "prefix": "np.ones",
+        "body": [
+            "np.ones((3,3)) # create a numpy array of ones {replace (3,3) with the shape of the array}"
+        ],
+    }, 
+    "create numpy random array":{
+        "prefix": "np.random",
+        "body": [
+            "np.random.rand(3,3) # create a numpy array of random numbers {replace (3,3) with the shape of the array}"
+        ],
+    },
+    "create numpy identity matrix":{
+        "prefix": "np.eye",
+        "body": [
+            "np.eye(3) # create a numpy identity matrix of size 3x3"
+        ],
+    },
+    "create numpy diagonal matrix":{
+        "prefix": "np.diag",
+        "body": [
+            "np.diag([1,2,3]) # create a numpy diagonal matrix {replace 1,2,3 with the diagonal elements}"
+        ],
+    },
+    "normalize numpy array":{
+        "prefix": "np.normalize",
+        "body": [
+            "np.normalize(array) # normalize a numpy array {replace array with the numpy array}"
+        ],
+    },
+    "reshape numpy array":{
+        "prefix": "np.reshape",
+        "body": [
+            "np.reshape(array,(3,3)) # reshape a numpy array {replace array with the numpy array and (3,3) with the new shape}"
+        ],
+    },
+    "flatten numpy array":{
+        "prefix": "np.flatten",
+        "body": [
+            "np.flatten(array) # flatten a numpy array {replace array with the numpy array}"
+        ],
+    },
+    "transpose numpy array":{
+        "prefix": "np.transpose",
+        "body": [
+            "np.transpose(array) # transpose a numpy array {replace array with the numpy array}"
+        ],
+    },  
+    "concatenate numpy arrays":{
+        "prefix": "np.concatenate",
+        "body": [
+            "np.concatenate([array1,array2],axis=0) # concatenate two numpy arrays along rows {replace array1 and array2 with the numpy arrays}"
+        ],
+    },
+    "stack numpy arrays":{
+        "prefix": "np.stack",
+        "body": [
+            "np.stack([array1,array2],axis=0) # stack two numpy arrays along a new axis {replace array1 and array2 with the numpy arrays}"
+        ],
+    },
+    
+
+
+    // basic ML scripts to learn
+
+    "Example for LR":{
+        "prefix": "simple_LR",
+        "body": [
+            "# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.linear_model import LinearRegression",
+            "",
+            "X = np.array([[1], [2], [3], [4], [5]])",
+            "y = np.array([2, 4, 6, 8, 10])",
+            "",
+            "model = LinearRegression()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6], [7], [8]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+    },
+    "train_test_split":{
+        "prefix": "train_test_split",
+        "body": [
+            "from sklearn.model_selection import train_test_split",
+            "",
+            "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)",
+            "print(X_train, X_test, y_train, y_test)"
+        ],
+    },
+    "Example for DT":{
+        "prefix": "simple_DT",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.tree import DecisionTreeClassifier",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = DecisionTreeClassifier()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+    },
+    "Example for KNN":{
+        "prefix": "simple_KNN",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.neighbors import KNeighborsClassifier",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = KNeighborsClassifier()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+    },
+    "Example for SVM":{
+        "prefix": "simple_SVM",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.svm import SVC",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = SVC()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+    },
+    "Example for RF":{
+        "prefix": "simple_RF",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.ensemble import RandomForestClassifier",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = RandomForestClassifier()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+    },
+    "Example for KMeans":{
+        "prefix": "simple_KMeans",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.cluster import KMeans",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "",
+            "model = KMeans(n_clusters=2)",
+            "model.fit(X)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+        "description": "Example for KMeans with dummy data"
+    },
+    "Example for PCA":{
+        "prefix": "simple_PCA",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.decomposition import PCA",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "",
+            "model = PCA(n_components=2)",
+            "model.fit(X)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "X_transformed = model.transform(X_test)",
+            "print(X_transformed)"
+        ],
+    },
+    "Example for LDA":{
+        "prefix": "simple_LDA",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.discriminant_analysis import LinearDiscriminantAnalysis",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = LinearDiscriminantAnalysis(n_components=1)",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "X_transformed = model.transform(X_test)",
+            "print(X_transformed)"
+        ],
+    },
+    "Example for NMF":{
+        "prefix": "simple_NMF",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.decomposition import NMF",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "",
+            "model = NMF(n_components=2)",
+            "model.fit(X)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "X_transformed = model.transform(X_test)",
+            "print(X_transformed)"
+        ],
+    },
+    "Example for TSNE":{
+        "prefix": "simple_TSNE",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from sklearn.manifold import TSNE",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "",
+            "model = TSNE(n_components=2)",
+            "X_transformed = model.fit_transform(X)",
+            "print(X_transformed)"
+        ],
+    },
+    "Example for Xgboost":{
+        "prefix": "simple_Xgboost",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "import xgboost as xgb",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = xgb.XGBClassifier()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+        "description": "Example for Xgboost with dummy data"
+    },
+    "Example for LightGBM":{
+        "prefix": "simple_LightGBM",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "import lightgbm as lgb",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = lgb.LGBMClassifier()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+        "description": "Example for LightGBM with dummy data"
+    },
+    "Example for CatBoost":{
+        "prefix": "simple_CatBoost",
+        "body": ["# for learning purpose only",
+            "import numpy as np",
+            "from catboost import CatBoostClassifier",
+            "",
+            "X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])",
+            "y = np.array([0, 1, 0, 1, 0])",
+            "",
+            "model = CatBoostClassifier()",
+            "model.fit(X, y)",
+            "",
+            "X_test = np.array([[6, 7], [7, 8], [8, 9]])",
+            "y_pred = model.predict(X_test)",
+            "print(y_pred)"
+        ],
+        "description": "Example for CatBoost with dummy data"
+    },
+
+
+    //Imports of Data Science and machine learning libraries
+
+
+    "import numpy":{
+        "prefix": "import numpy",
+        "body": [
+            "import numpy as np"
+        ],
+        "description": "import numpy"
+    },
+    "import pandas":{
+        "prefix": "import pandas",
+        "body": [
+            "import pandas as pd"
+        ],
+        "description": "import pandas"
+    },
+    "import matplotlib":{
+        "prefix": "import matplotlib",
+        "body": [
+            "import matplotlib.pyplot as plt"
+        ],
+        "description": "import matplotlib"
+    },
+    "import seaborn":{
+        "prefix": "import seaborn",
+        "body": [
+            "import seaborn as sns"
+        ],
+        "description": "import seaborn"
+    },
+    "import tensorflow":{
+        "prefix": "import tensorflow",
+        "body": [
+            "import tensorflow as tf"
+        ],
+        "description": "import tensorflow"
+    },
+    "import statsmodels":{
+        "prefix": "import statsmodels",
+        "body": [
+            "import statsmodels.api as sm"
+        ],
+        "description": "import statsmodels"
+    },
+    "import pyplot":{
+        "prefix": "import pyplot",
+        "body": [
+            "from matplotlib import pyplot as plt"
+        ],
+        "description": "import pyplot"
+    },
+    "random normal":{
+        "prefix": "np.random.normal",
+        "body": [
+            "np.random.normal(loc=0, scale=1, size=100) # generate random numbers from a normal distribution {replace loc, scale, size with the mean, standard deviation, and size of the sample}"
+        ],
+    },
+    "random uniform":{
+        "prefix": "np.random.uniform",
+        "body": [
+            "np.random.uniform(low=0, high=1, size=100) # generate random numbers from a uniform distribution {replace low, high, size with the lower bound, upper bound, and size of the sample}"
+        ],
+    },
+
+}
