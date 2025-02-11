@@ -1,40 +1,43 @@
 # DeepCode README
 
-This is the extension to boost up productivity in creating ML algorithms
+This is the extension to boost up productivity in creating ML algorithms.
+The extension currently contains the snippets of the pandas, Numpy, Matplotlib, Scikit-learn.
 
 ## Features
 
-The extension is useful for creating ML code easily
-For example if there is an image subfolder under your extension project workspace:
+The extension is useful for creating ML code easily.
+
+Basic reading scipts of pandas:
+
+| Abbrevation | Description |
+| ----------- | ----------- |
+| read_{format} | creates lines for reading files as df |
+| pd.dataframe | creates lines for dataframe creation using dictionary|
+| simple_{alg} <br>(eg.simple_LR) | creates lines for simple implementation of ML algorithms<br>Creates simple Linear regression algorithm implemention code. |
+| train_test_split | code to split data into training and testing sets |
+<hr>
 
 ## Requirements
 
-No requirements needed
+To enjoy this, install pandas,numpy,matplotlib and scikit-learn.<br>
+`pip install pandas`<br>
+`pip install numpy`<br>
+`pip install matplotlib`
 
-## Extension Settings
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
 ## Release Notes
 
-This is first vscode extension project
+### Version 1.0.1
 
-### 0.0.1
+- First version with snippets of python packages of sklearn, pandas and numpy.
+- Compatible to vs code version above 1.60.
 
-First release of snippets
-
-## Working with Markdown
-
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+See changelog to see changes from previous versions,
 
 ## Contact Author
 
-Name: Dheena Krishna S
-email: dheenakrishna2020@outlook.com
+Name: Dheena Krishna S <br>
+Email: dheenakrishna2020@outlook.com <br>
 Linkedin: https://www.linkedin.com/in/dheena-krishna-s
 
 **Enjoy!**

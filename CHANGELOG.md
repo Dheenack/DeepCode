@@ -1,9 +1,11 @@
 # Change Log
 
-All notable changes to the "DeepCode" extension will be documented in this file.
+## version 1.0.1
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Version with compatibilty to vs code versions above 1.60.
+- Improved Snippet contents and documentation.
+- Improved Search optimisation with well known keywords
 
-## [Unreleased]
+## version 0.0.1
 
-- Initial release
+- Initial release with the code snippets.

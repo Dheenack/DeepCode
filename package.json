@@ -1,5 +1,5 @@
 {
-  "name": "DeepCodeML",
+  "name": "deepcodeml",
   "displayName": "DeepCode: Be a sorcerer Supreme of AI,ML and DS coding",
   "description": "A snippet pack that would make you productive in ML and DS projects.",
   "icon": "download.png","repository": {
@@ -7,20 +7,29 @@
     "url": "https://github.com/Dheenack/DeepCode"
   },
   "publisher": "DheenaKrishnaS",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.50.0"
   },
-  "categories": [
-    "Snippets"
-  ],
+  "categories": ["Snippets"],
   "contributes": {
-    "snippets": [
+    "snippets":
+     [
       {
         "language": "python",
         "path": "./snippets/snippets.code-snippets"
       }
     ]
-  }
-
+  },
+  "keywords": [
+    "machine learning",
+    "deep learning",
+    "data science",
+    "AI",
+    "Python",
+    "snippets",
+    "ML",
+    "DS"
+],
+"update": "minor"
 }
