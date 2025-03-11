@@ -1,43 +1,54 @@
-# DeepCode README
+# 🚀 DeepCode - VS Code Extension for ML Productivity
 
-This is the extension to boost up productivity in creating ML algorithms.
-The extension currently contains the snippets of the pandas, Numpy, Matplotlib, Scikit-learn.
+DeepCode is a VS Code extension designed to enhance productivity in creating machine learning algorithms. It provides handy code snippets for popular Python libraries such as 🐼 Pandas, 🔢 NumPy, 📊 Matplotlib, and 🤖 Scikit-learn.
 
-## Features
+## ✨ Features
 
-The extension is useful for creating ML code easily.
+DeepCode simplifies the process of writing ML-related code by providing quick and reusable snippets. Some key features include:
 
-Basic reading scipts of pandas:
+![simple usage of extension](assets\usage.gif)
 
-| Abbrevation | Description |
-| ----------- | ----------- |
-| read_{format} | creates lines for reading files as df |
-| pd.dataframe | creates lines for dataframe creation using dictionary|
-| simple_{alg} <br>(eg.simple_LR) | creates lines for simple implementation of ML algorithms<br>Creates simple Linear regression algorithm implemention code. |
-| train_test_split | code to split data into training and testing sets |
-<hr>
+### 📌 Pandas Snippets
+- **`read_{format}`** 📂: Generates lines for reading files as a DataFrame.
+- **`pd.dataframe`** 📜: Creates a DataFrame using a dictionary.
 
-## Requirements
+### 🤖 Machine Learning Snippets
+- **`simple_{alg}`** (e.g., `simple_LR`) 🧠: Generates simple implementation code for ML algorithms, such as Linear Regression.
+- **`train_test_split`** ✂️: Code to split data into training and testing sets.
 
-To enjoy this, install pandas,numpy,matplotlib and scikit-learn.<br>
-`pip install pandas`<br>
-`pip install numpy`<br>
-`pip install matplotlib`
+## ⚙️ Requirements
+
+Ensure you have the following Python packages installed to use this extension effectively:
+
+```sh
+pip install pandas numpy matplotlib scikit-learn
+```
+
+## 📥 Installation
+
+1. Open VS Code.
+2. Go to the Extensions Marketplace.
+3. Search for **DeepCode** and install it.
+4. Restart VS Code if necessary.
+
+## 📝 Release Notes
+
+### 🔖 Version 1.0.1
+- 🎉 Initial release with Python snippets for Pandas, NumPy, Matplotlib, and Scikit-learn.
+- ✅ Compatible with VS Code version **1.60 and above**.
+
+Refer to the **changelog** for details on updates and improvements.
 
 
-## Release Notes
+## 📬 Contact
 
-### Version 1.0.1
+📌 **Author**: Dheena Krishna S  
+📧 **Email**: [dheenakrishna2020@outlook.com](mailto:dheenakrishna2020@outlook.com)  
+🔗 **LinkedIn**: [Dheena Krishna S](https://www.linkedin.com/in/dheena-krishna-s)  
 
-- First version with snippets of python packages of sklearn, pandas and numpy.
-- Compatible to vs code version above 1.60.
+---
 
-See changelog to see changes from previous versions,
+## License
+This extension is licensed under GPL license.
 
-## Contact Author
-
-Name: Dheena Krishna S <br>
-Email: dheenakrishna2020@outlook.com <br>
-Linkedin: https://www.linkedin.com/in/dheena-krishna-s
-
-**Enjoy!**
+🔥 **Enjoy coding with DeepCode!** 🚀
