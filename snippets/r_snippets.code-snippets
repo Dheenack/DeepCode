@@ -1,0 +1,27 @@
+{
+    "read_csv": {
+        "prefix": "read_csv",
+        "body": [
+            "library(readr)",
+            "",
+            "# Read CSV file",
+            "data <- read_csv('${1:your_file.csv}')",
+            "",
+            "# Display the first few rows of the data",
+            "head(data)"
+        ],
+        "description": "Read a CSV file into R using readr package"
+    },
+    "ggplot2_scatter_plot": {
+        "prefix": "ggplot2_scatter_plot",
+        "body": [
+            "library(ggplot2)",
+            "",
+            "# Create a scatter plot",
+            "ggplot(data, aes(x = ${1:x_variable}, y = ${2:y_variable})) +",
+            "  geom_point() +",
+            "  labs(title = '${3:Plot Title}', x = '${4:X Axis Label}', y = '${5:Y Axis Label}')"
+        ],
+        "description": "Create a scatter plot using ggplot2"
+    },
+}

@@ -6,8 +6,12 @@
     "type": "git",
     "url": "https://github.com/Dheenack/DeepCode"
   },
+  "author": {
+    "name": "Dheena Krishna S",
+    "email": "dheenakrishna2020@outlook.com"
+  },
   "publisher": "DheenaKrishnaS",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -19,6 +23,10 @@
       {
         "language": "python",
         "path": "./snippets/py_snippets.code-snippets"
+      },
+      {
+        "language": "r",
+        "path": "./snippets/r_snippets.code-snippets"
       }
     ]
   },

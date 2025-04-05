@@ -1,11 +1,17 @@
 # Change Log
 
-## `version 1.0.2`
+## version 1.0.4
+
+- Documentaion change.
+- Optimized code snippets for better customisation.
+- read_csv is updated for R language too.
+
+## version 1.0.3
 
 - Documentation change.
 - Optimized code snippets.
 
-## `version 1.0.2`
+## version 1.0.2
 
 - The logo has been changed to look more aesthetic.
 - Some more snippets are added for seaborn and matplotlib.

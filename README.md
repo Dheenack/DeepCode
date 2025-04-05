@@ -1,12 +1,13 @@
 # 🚀 DeepCode - VS Code Extension for ML Productivity
 
 DeepCode is a VS Code extension designed to enhance productivity in creating machine learning algorithms. It provides handy code snippets for popular Python libraries such as 🐼 Pandas, 🔢 NumPy, 📊 Matplotlib, and 🤖 Scikit-learn.
+It is also evolving to support multiple languages such as R,Java,julia and scala. Stay tuned and keep updating for better Experience.
 
 ## ✨ Features
 
 DeepCode simplifies the process of writing ML-related code by providing quick and reusable snippets. Some key features include:
 
-![simple usage of extension](assets\usage.gif)
+![simple usage of extension](./assets/usage.gif)
 
 ### 📌 Pandas Snippets
 - **`read_{format}`** 📂: Generates lines for reading files as a DataFrame.
